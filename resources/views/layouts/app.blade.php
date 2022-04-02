@@ -9,8 +9,10 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <!-- Boo Stylesheet -->
+        <!-- Bootstrap Stylesheet -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}" >
 
         <!-- Styles -->
         <style>
@@ -24,12 +26,18 @@
         </style>
     </head>
     <body>
-        <img src="{{ asset('img/headerlogo.png')}}">
-        @include('include.header')
+        <header>
+            <img src="{{ asset('img/headerlogo.png')}}">
+            @include('include.header')
+        </header>
+        
         @include('include.navigation')
-        <div class="container">
-            @yield('content')
-        </div>
+        <main>
+            <div class="container">
+                @yield('content')
+            </div>
+        </main>
+        
         @include('include.footer')
     </body>
 </html>

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\RoomsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +21,8 @@ Route::get('/', function () {
 });
 
 Route:: get('/', [AboutController::class, 'index']);
-Route:: get('/about', [AboutController::class, 'index']);
+Route:: get('/about', [AboutController::class, 'index'])->name('about');
+Route:: get('/rooms', [RoomsController::class, 'index'])->name('rooms');
 
+//Route::resource('rooms', 'RoomsController');
+//Route::resource('bookings', 'BookingsController');
