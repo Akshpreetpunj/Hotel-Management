@@ -12,7 +12,7 @@
                 <a class="nav-item nav-link pr-4" href="{{ route('rooms') }}">Rooms</a>
             </li>
             <li class="{{ (request()->is('bookings')) ? 'nav-item active' : 'nav-item' }}">
-                <a class="nav-item nav-link pr-4" href="/bookings">Bookings</a>
+                <a class="nav-item nav-link pr-4" href="{{ route('bookings') }}">Bookings</a>
             </li>
         </ul>
     </div>
