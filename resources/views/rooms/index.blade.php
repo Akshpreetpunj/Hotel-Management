@@ -23,9 +23,6 @@
                         <td>{{$room->room_name}}</td>
                         <td>{{$room->room_description}}</td>
                         <td>{{$room->max_occupancy}}</td>
-                        <td>
-                            <a href="/rooms/edit" type="button" class="btn btn-primary btn-sm">Edit</a>
-                        </td>
                         <!--
                         <td><a href="/rooms/{{$room->id}}/edit" type="button" class="btn btn-primary btn-sm">Edit</a>
                             {!! Form::open(['url' => '//still-journey-97048.herokuapp.com/rooms/' . $room->id, 'method'=> 'POST']) !!}
