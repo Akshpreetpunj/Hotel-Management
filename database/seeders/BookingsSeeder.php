@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
 
 class BookingsSeeder extends Seeder
 {
@@ -13,6 +15,10 @@ class BookingsSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('bookings')->insert([
+            'room_number' => '1', 
+            'guest_name' => 'William', 
+            'date' => '2022-04-03'
+        ]);
     }
 }

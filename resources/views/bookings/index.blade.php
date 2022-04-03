@@ -2,6 +2,27 @@
 
 @section('content')
     <h1>Rooms Bookings</h1>
+    <h2>Create New Bookings</h2>
+    <a href="/rooms/create" type="button" class="btn btn-success btn-sm mb-3">Create New Rooms</a>
+
+    <form method="post" action="{{ url('/bookings') }}">
+    @csrf
+        <div class="form-group">
+            <label for="room_number">Room Number:</label>
+            <input type="number" class="form-control" name="room_number" id="room_number" placeholder="Room Number" required/>
+        </div>
+        <div class="form-group">
+            <label for="guest_name">Guest Name:</label>
+            <input type="text" class="form-control" name="guest_name" id="guest_name" placeholder="Name" required/>
+        </div>
+        <div class="form-group">
+            <label for="date">Booking Date:</label>
+            <input type="date" class="form-control" name="date" id="date" placeholder="Date" required/>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
 
     <table class="table">
         <thead class="thead-dark">
@@ -21,7 +42,13 @@
                         <td>{{$booking->room_name}}</td>
                         <td>{{$booking->guest_name}}</td>
                         <td>{{$booking->date}}</td>
-                        <td></td>
+                        <td>
+                            <form action="{{ url('/bookings') . '/' . $booking->id }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             @else

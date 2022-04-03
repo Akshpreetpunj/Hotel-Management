@@ -79,7 +79,7 @@ class RoomsController extends Controller
     public function update(Request $request, $id)
     {
         $room = Room::find($id);
-        $room->room_description = $request->input('rooms_description');
+        $room->room_description = $request->input('room_description');
         $room->save();
 
         return redirect('/rooms')->with('success', 'Room Description Updated');

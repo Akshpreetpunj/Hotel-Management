@@ -22,7 +22,6 @@ Route::get('/', function () {
 });
 
 Route:: get('/', [AboutController::class, 'index']);
-
 Route:: get('/about', [AboutController::class, 'index'])->name('about');
 
 Route::resource('rooms', 'RoomsController');

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Booking;
 use Illuminate\Http\Request;
+use App\Models\Booking;
+use App\Models\Room;
+use Illuminate\Support\Facades\DB;
 
 class BookingsController extends Controller
 {
@@ -14,7 +16,10 @@ class BookingsController extends Controller
      */
     public function index()
     {
-        $bookings = Booking::all();
+        $bookings = DB::table('bookings')
+                    ->join('rooms', 'bookings.room_number', '=', 'rooms.id')
+                    ->select('bookings.room_number', 'rooms.room_name', 'bookings.guest_name', 'date', 'bookings.id')
+                    ->get();
         return view('bookings.index')->with('bookings', $bookings);
     }
 
@@ -25,7 +30,7 @@ class BookingsController extends Controller
      */
     public function create()
     {
-        //
+        return view('bookings.create');
     }
 
     /**
@@ -36,7 +41,18 @@ class BookingsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $bookings = new Booking;
+            $bookings->room_number = $request->input('room_number');
+            $bookings->guest_name = $request->input('guest_name');
+            $bookings->date = $request->input('date');
+            $bookings->save();
+    
+            return redirect('/bookings')->with('success', 'Booking Created');
+        }catch (\Illuminate\Database\QueryException $ex){
+            return redirect('/bookings')->with('error', 'Room Number does not exit.');
+        }
+        
     }
 
     /**
@@ -45,7 +61,7 @@ class BookingsController extends Controller
      * @param  \App\Models\Booking  $booking
      * @return \Illuminate\Http\Response
      */
-    public function show(Booking $booking)
+    public function show($id)
     {
         //
     }
@@ -56,7 +72,7 @@ class BookingsController extends Controller
      * @param  \App\Models\Booking  $booking
      * @return \Illuminate\Http\Response
      */
-    public function edit(Booking $booking)
+    public function edit($id)
     {
         //
     }
@@ -68,7 +84,7 @@ class BookingsController extends Controller
      * @param  \App\Models\Booking  $booking
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Booking $booking)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -79,8 +95,10 @@ class BookingsController extends Controller
      * @param  \App\Models\Booking  $booking
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Booking $booking)
+    public function destroy($id)
     {
-        //
+        $booking = Booking::find($id);
+        $booking->delete();
+        return redirect('/bookings')->with('success', 'Booking successfully deleted');
     }
 }
