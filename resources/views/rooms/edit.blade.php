@@ -11,6 +11,6 @@
             <input type="text" class="form-control" name="room_description" id="room_description" placeholder="Room Description" value="{{ $room->room_description }}" required/>
         </div>
         
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary my-4">Submit</button>
       </form>
 @endsection
