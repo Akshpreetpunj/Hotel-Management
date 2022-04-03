@@ -28,7 +28,7 @@
                             
                         </td>
                         <td>
-                            <form action="{{ url('/rooms')/ . $room->id }}" method="post">
+                            <form action="{{ url('/rooms') }}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger" type="submit">Delete</button>
