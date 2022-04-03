@@ -3,7 +3,7 @@
 @section('content')
     <h1>Create Hotel Rooms</h1>
 
-    {!! Form::open(['url' => '{{url('/rooms')}}/create', 'method'=> 'POST']) !!}
+    {!! Form::open(['url' => 'http://still-journey-97048.herokuapp.com/rooms', 'method'=> 'POST']) !!}
 
     @csrf
         <div class="form-group">
