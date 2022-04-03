@@ -26,10 +26,10 @@
                         <td>{{$room->max_occupancy}}</td>
                         <td><a href="#" type="button" class="btn btn-primary btn-sm">Edit</a></td>
                         <td>
-                            <form action="{{ url('/rooms') }}" method="post">
+                            <form action="{{ url('/rooms') . $room->id }}" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <button class="btn btn-danger" type="submit">Delete</button>
+                                <button class="btn btn-danger btn-sm" type="submit">Delete</button>
                             </form>
                         </td>
                     </tr>
