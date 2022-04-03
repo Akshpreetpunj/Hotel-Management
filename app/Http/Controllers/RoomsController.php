@@ -78,12 +78,8 @@ class RoomsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'room_description' => 'required',
-        ]);
-
         $room = Room::find($id);
-        $room->room_description = $request->input('description');
+        $room->room_description = $request->input('rooms_description');
         $room->save();
 
         return redirect('/rooms')->with('success', 'Room Description Updated');

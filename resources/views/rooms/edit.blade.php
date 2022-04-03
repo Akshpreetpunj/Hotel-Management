@@ -3,7 +3,7 @@
 @section('content')
     <h1>Edit Hotel Room Description</h1>
 
-    <form method="post" action="{{ url('/rooms') }}">
+    <form method="post" action="{{ route('rooms.update', $room->id) }}">
     @csrf
     @method('PATCH')
         <div class="form-group">
