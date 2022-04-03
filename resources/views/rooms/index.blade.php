@@ -11,7 +11,6 @@
                 <th>Room Name</th>
                 <th>Room Description</th>
                 <th>Max Occupancy</th>
-                <th></th>
             </tr>
         </thead>
         
