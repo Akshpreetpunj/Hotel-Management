@@ -23,6 +23,7 @@
                         <td>{{$room->room_name}}</td>
                         <td>{{$room->room_description}}</td>
                         <td>{{$room->max_occupancy}}</td>
+                        <td><a href="#" type="button" class="btn btn-primary btn-sm">Edit</a></td>
                     </tr>
                 @endforeach
             @else
