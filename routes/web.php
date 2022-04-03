@@ -17,8 +17,15 @@ use App\Http\Controllers\BookingsController;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('layouts.app');
+});
+
+Route:: get('/', [AboutController::class, 'index']);
+*/
+
+Route::get('/', function () {
+    return view('rooms.create');
 });
 
 Route:: get('/', [AboutController::class, 'index']);
