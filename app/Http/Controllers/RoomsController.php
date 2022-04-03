@@ -36,13 +36,6 @@ class RoomsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'id' => 'required',
-            'room_name' => 'required',
-            'room_description' => 'required',
-            'max_occupancy' => 'required',
-        ]);
-
         $room = new Room;
         $room->id = $request->input('id');
         $room->room_name = $request->input('room_name');
