@@ -16,10 +16,12 @@ class BookingsController extends Controller
      */
     public function index()
     {
-        $bookings = DB::table('bookings')
+        /*$bookings = DB::table('bookings')
                     ->join('rooms', 'bookings.room_number', '=', 'rooms.id')
                     ->select('bookings.room_number', 'rooms.room_name', 'bookings.guest_name', 'date', 'bookings.id')
-                    ->get();
+                    ->get();*/
+        $bookings = Booking::all();
+
         return view('bookings.index')->with('bookings', $bookings);
     }
 
