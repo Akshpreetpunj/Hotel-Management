@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Create Hotel Rooms</h1>
+    <h2>Create Hotel Rooms</h2>
 
     <form method="post" action="{{ url('/rooms') }}">
     @csrf
@@ -22,7 +22,7 @@
             <input type="number" class="form-control" name="max_occupancy" id="max_occupancy" placeholder="Max Occupancy" required/>
         </div>
         
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary my-4">Submit</button>
       </form>
 
 @endsection
