@@ -16,7 +16,7 @@ class BookingsSeeder extends Seeder
     public function run()
     {
         DB::table('bookings')->insert([
-            'room_number' => '1', 
+            'room_number' => '5', 
             'guest_name' => 'William', 
             'date' => '2022-04-03'
         ]);
