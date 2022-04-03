@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h2>Edit Hotel Room Description</h2>
+    <h2>Edit Room Description</h2>
 
     <form method="post" action="{{ url('/rooms') . '/' . $room->id }}">
     @csrf

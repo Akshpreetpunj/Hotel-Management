@@ -3,7 +3,7 @@
 @section('content')
     <h2>Rooms Bookings</h2>
     <h3>Create New Bookings</h3>
-    
+
     <form method="post" action="{{ url('/bookings') }}">
     @csrf
         <div class="form-group">
@@ -12,7 +12,7 @@
         </div>
         <div class="form-group">
             <label for="guest_name">Guest Name:</label>
-            <input type="text" class="form-control" name="guest_name" id="guest_name" placeholder="Name" required/>
+            <input type="text" class="form-control" name="guest_name" id="guest_name" placeholder="Guest Name" required/>
         </div>
         <div class="form-group">
             <label for="date">Booking Date:</label>

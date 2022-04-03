@@ -12,6 +12,7 @@ class Booking extends Model
     // Table Name
     protected $table = 'bookings';
 
+    // Fillable Attributes 
     protected $fillable = ['room_number', 'guest_name', 'date'];
 
     // Primary Key

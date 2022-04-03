@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <h2>Hotel Rooms</h2>
-    <a href="/rooms/create" type="button" class="btn btn-success btn-sm mb-3">Create New Rooms</a>
+    <h2>Rooms</h2>
+    <a href="/rooms/create" type="button" class="btn btn-success btn-sm mb-3">Create New Room</a>
 
     <table class="table">
         <thead class="thead-dark">

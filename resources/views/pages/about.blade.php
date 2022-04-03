@@ -2,6 +2,7 @@
 
 @section('content')
     <h2>{{$title}}</h2>
+    {{-- Content From https://randomtextgenerator.com/ --}}
     <p>
         Admiration stimulated cultivated reasonable be projection possession of. Real no near room ye bred sake if some. 
         Is arranging furnished knowledge agreeable so. Fanny as smile up small. It vulgar chatty simple months turned oh 

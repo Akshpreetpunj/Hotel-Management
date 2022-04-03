@@ -12,6 +12,7 @@ class Room extends Model
     // Table Name
     protected $table = 'rooms';
 
+    // Fillable Attributes 
     protected $fillable = ['room_name', 'room_description', 'max_occupancy'];
 
     // Primary Key

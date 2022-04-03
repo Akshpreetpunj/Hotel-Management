@@ -1,3 +1,3 @@
 <footer class="bg-dark text-white footer mt-auto py-2">
-    <p>Copyright 2022</p>
+    <p class="text-center">Copyright 2022</p>
 </footer>
