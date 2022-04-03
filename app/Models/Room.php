@@ -12,8 +12,6 @@ class Room extends Model
     // Table Name
     protected $table = 'rooms';
 
-    //protected $fillable = ['room_name', 'room_description' , 'max_occupancy'];
-
     // Primary Key
     public $primaryKey = 'id';
 }

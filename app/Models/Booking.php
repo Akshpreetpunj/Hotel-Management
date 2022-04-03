@@ -9,11 +9,9 @@ class Booking extends Model
 {
     use HasFactory;
 
-     // Table Name
-     protected $table = 'bookings';
+    // Table Name
+    protected $table = 'bookings';
 
-     //protected $fillable = ['room_name', 'room_description' , 'max_occupancy'];
- 
-     // Primary Key
-     public $primaryKey = 'id';
+    // Primary Key
+    public $primaryKey = 'id';
 }

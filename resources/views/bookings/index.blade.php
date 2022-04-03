@@ -2,7 +2,6 @@
 
 @section('content')
     <h1>Rooms Bookings</h1>
-    <a href="/rooms/create" type="button" class="btn btn-success btn-sm mb-3">Create New Rooms</a>
 
     <table class="table">
         <thead class="thead-dark">
@@ -22,7 +21,7 @@
                         <td>{{$booking->room_name}}</td>
                         <td>{{$booking->guest_name}}</td>
                         <td>{{$booking->date}}</td>
-                        <td><a href="/" type="button" class="btn btn-primary btn-sm">Delete</a></td>
+                        <td></td>
                     </tr>
                 @endforeach
             @else
