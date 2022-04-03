@@ -12,6 +12,7 @@
                 <th>Room Description</th>
                 <th>Max Occupancy</th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         
@@ -24,6 +25,13 @@
                         <td>{{$room->room_description}}</td>
                         <td>{{$room->max_occupancy}}</td>
                         <td><a href="#" type="button" class="btn btn-primary btn-sm">Edit</a></td>
+                        <td>
+                            <form action="{{ url('/rooms') }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger" type="submit">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             @else
