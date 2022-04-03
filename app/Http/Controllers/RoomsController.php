@@ -2,21 +2,40 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Room;
+use Illuminate\Http\Request;
 
 class RoomsController extends Controller
 {
-    public function index(){
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
         $rooms = Room::all();
         return view('rooms.index')->with('rooms', $rooms);
     }
 
-    public function create(){
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
         return view('rooms.create');
     }
 
-    public function store(Request $request){
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
         $this->validate($request, [
             'id' => 'required',
             'room_name' => 'required',
@@ -34,16 +53,38 @@ class RoomsController extends Controller
         return redirect('/rooms')->with('success', 'Room Created');
     }
 
-    public function show($id){
-
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Room  $room
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Room $room)
+    {
+        //
     }
 
-    public function edit($id){
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Room  $room
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
         $room = Room::find($id);
         return view('rooms.edit')->with('room', $room);
     }
 
-    public function update(Request $request, $id){
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Room  $room
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
         $this->validate($request, [
             'room_description' => 'required',
         ]);
@@ -55,7 +96,14 @@ class RoomsController extends Controller
         return redirect('/rooms')->with('success', 'Room Description Updated');
     }
 
-    public function destroy($id){
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Room  $room
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
         $room = Room::find($id);
         $room->delete();
         return redirect('/rooms')->with('success', 'Room Deleted');
