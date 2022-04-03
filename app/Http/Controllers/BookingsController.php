@@ -20,8 +20,6 @@ class BookingsController extends Controller
                     ->join('rooms', 'bookings.room_number', '=', 'rooms.id')
                     ->select('bookings.room_number', 'rooms.room_name', 'bookings.guest_name', 'date', 'bookings.id')
                     ->get();
-        /*$bookings = Booking::all();*/
-
         return view('bookings.index')->with('bookings', $bookings);
     }
 
