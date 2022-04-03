@@ -3,8 +3,7 @@
 @section('content')
     <h2>Rooms Bookings</h2>
     <h3>Create New Bookings</h3>
-    <a href="/rooms/create" type="button" class="btn btn-success btn-sm mb-3">Create New Rooms</a>
-
+    
     <form method="post" action="{{ url('/bookings') }}">
     @csrf
         <div class="form-group">

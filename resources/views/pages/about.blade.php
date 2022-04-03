@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>{{$title}}</h1>
+    <h2>{{$title}}</h2>
     <p>
         Admiration stimulated cultivated reasonable be projection possession of. Real no near room ye bred sake if some. 
         Is arranging furnished knowledge agreeable so. Fanny as smile up small. It vulgar chatty simple months turned oh 
@@ -15,11 +15,6 @@
         So feel been kept be at gate. Be september it extensive oh concluded of certainty. In read most gate at body held it ever no. 
         Talking justice welcome message inquiry in started of am me. Led own hearted highest visited lasting sir through compass his. 
         Guest tiled he quick by so these trees am. It announcing alteration at surrounded comparison.
-
-        Moments its musical age explain. But extremity sex now education concluded earnestly her continual. 
-        Oh furniture acuteness suspected continual ye something frankness. Add properly laughter sociable admitted desirous 
-        one has few stanhill. Opinion regular in perhaps another enjoyed no engaged he at. It conveying he continual ye 
-        suspected as necessary. Separate met packages shy for kindness.
     </p>
 
     <p>
@@ -33,11 +28,6 @@
         Quick can manor smart money hopes worth too. Comfort produce husband boy her had hearing. 
         Law others theirs passed but wishes. You day real less till dear read. 
         Considered use dispatched melancholy sympathize discretion led. Oh feel if up to till like.
-
-        Those an equal point no years do. Depend warmth fat but her but played. 
-        Shy and subjects wondered trifling pleasant. Prudent cordial comfort do no on colonel as assured chicken. 
-        Smart mrs day which begin. Snug do sold mr it if such. Terminated uncommonly at at estimating. 
-        Man behaviour met moonlight extremity acuteness direction.
 
         Am if number no up period regard sudden better. Decisively surrounded all admiration and not you. 
         Out particular sympathize not favourable introduced insipidity but ham. Rather number can and set praise. 
