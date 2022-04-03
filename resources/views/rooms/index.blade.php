@@ -24,7 +24,7 @@
                         <td>{{$room->room_description}}</td>
                         <td>{{$room->max_occupancy}}</td>
                         <td>
-                            <a href="/rooms/{{$room->id}}/edit" type="button" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="/rooms/edit" type="button" class="btn btn-primary btn-sm">Edit</a>
                         </td>
                         <!--
                         <td><a href="/rooms/{{$room->id}}/edit" type="button" class="btn btn-primary btn-sm">Edit</a>
