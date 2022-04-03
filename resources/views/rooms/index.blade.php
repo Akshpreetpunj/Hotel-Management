@@ -18,7 +18,6 @@
             @if(count($rooms) > 0)
                 @foreach($rooms as $room)
                     <tr>
-                        <th>{{$room->id}}</th>
                         <td>{{$room->room_name}}</td>
                         <td>{{$room->room_description}}</td>
                         <td>{{$room->max_occupancy}}</td>
