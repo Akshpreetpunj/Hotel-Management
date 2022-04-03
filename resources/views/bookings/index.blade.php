@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h2>Rooms Bookings</h2>
+    <h2>Room Bookings</h2>
     <h3>Create New Bookings</h3>
 
     <form method="post" action="{{ url('/bookings') }}">
