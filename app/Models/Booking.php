@@ -12,6 +12,8 @@ class Booking extends Model
     // Table Name
     protected $table = 'bookings';
 
+    protected $fillable = ['room_number', 'guest_name', 'date'];
+
     // Primary Key
     public $primaryKey = 'id';
 }
