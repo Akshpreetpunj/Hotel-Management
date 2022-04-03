@@ -28,6 +28,5 @@ Route:: get('/rooms', [RoomsController::class, 'index'])->name('rooms');
 Route:: get('/bookings', [BookingsController::class, 'index'])->name('bookings');
 
 Route:: get('/rooms/create', [RoomsController::class, 'create']);
-Route:: get('/rooms/edit', [RoomsController::class, 'edit']);
 //Route::resource('rooms', 'RoomsController');
 //Route::resource('bookings', 'BookingsController');
