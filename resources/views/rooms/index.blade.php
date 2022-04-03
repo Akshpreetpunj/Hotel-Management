@@ -23,21 +23,22 @@
                         <td>{{$room->room_name}}</td>
                         <td>{{$room->room_description}}</td>
                         <td>{{$room->max_occupancy}}</td>
-                        <!--<td><a href="/rooms/{{$room->id}}/edit" type="button" class="btn btn-primary btn-sm">Edit</a>-->
+                        <td><a href="/rooms/edit" type="button" class="btn btn-primary btn-sm">Edit</a>
                             
                         </td>
+                        <!--
                         <td>
                             <form action="{{ url('/rooms')}}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger" type="submit">Delete</button>
                             </form>
-                            <!--{!! Form::open(['url' => '//still-journey-97048.herokuapp.com/rooms/' . $room->id, 'method'=> 'POST']) !!}
+                            {!! Form::open(['url' => '//still-journey-97048.herokuapp.com/rooms/' . $room->id, 'method'=> 'POST']) !!}
                             @csrf
                             {{Form::hidden('_method', 'DELETE')}}
                                 {{Form::submit('Delete'), ['class' => 'btn btn-danger btn-sm']}}
-                            {!!Form::close()!!} -->
-                        </td>
+                            {!!Form::close()!!}
+                        </td> -->
                     </tr>
                 @endforeach
             @else
