@@ -24,8 +24,8 @@ Route::get('/', function () {
 Route:: get('/', [AboutController::class, 'index']);
 
 Route:: get('/about', [AboutController::class, 'index'])->name('about');
-//Route:: get('/rooms', [RoomsController::class, 'index'])->name('rooms');
-//Route:: get('/bookings', [BookingsController::class, 'index'])->name('bookings');
+Route:: get('/rooms', [RoomsController::class, 'index'])->name('rooms');
+Route:: get('/bookings', [BookingsController::class, 'index'])->name('bookings');
 
-Route::controller('rooms', 'RoomsController');
-Route::controller('bookings', 'BookingsController');
+//Route::controller('rooms', 'RoomsController');
+//Route::controller('bookings', 'BookingsController');
