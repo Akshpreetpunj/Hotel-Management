@@ -50,7 +50,7 @@ class RoomsController extends Controller
         $room->max_occupancy = $request->input('max_occupancy');
         $room->save();
 
-        return redirect('/rooms')->with('success', 'Room Created');
+        return redirect('/rooms');
     }
 
     /**
