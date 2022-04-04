@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * "StAuth10127: I Akshpreet Singh Punj, 000820040 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else."
+ */
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\RoomsController;
@@ -29,7 +33,3 @@ Route::resource('bookings', 'BookingsController');
 
 Route:: get('/rooms', [RoomsController::class, 'index'])->name('rooms');
 Route:: get('/bookings', [BookingsController::class, 'index'])->name('bookings');
-
-//Route:: get('/rooms/create', [RoomsController::class, 'create']);
-//Route:: get('/rooms/{id}/edit', [RoomsController::class, 'edit']);
-

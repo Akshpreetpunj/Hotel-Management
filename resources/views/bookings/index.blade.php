@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+{{-- "StAuth10127: I Akshpreet Singh Punj, 000820040 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else." --}}
+
 @section('content')
     <h2>Room Bookings</h2>
     <h3>Create New Bookings</h3>
@@ -23,6 +25,7 @@
       </form>
 
 
+      {{-- Bookings Table --}}
     <table class="table">
         <thead class="thead-dark">
             <tr>

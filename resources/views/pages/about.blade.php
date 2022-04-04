@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+{{-- "StAuth10127: I Akshpreet Singh Punj, 000820040 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else." --}}
+
 @section('content')
     <h2>{{$title}}</h2>
     {{-- Content From https://randomtextgenerator.com/ --}}

@@ -1,9 +1,12 @@
 @extends('layouts.app')
 
+{{-- "StAuth10127: I Akshpreet Singh Punj, 000820040 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else." --}}
+
 @section('content')
     <h2>Rooms</h2>
     <a href="/rooms/create" type="button" class="btn btn-success btn-sm mb-3">Create New Room</a>
 
+    {{-- Rooms Table --}}
     <table class="table">
         <thead class="thead-dark">
             <tr>
