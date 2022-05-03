@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Str;
 
-/*$DATABASE_URL = parse_url("postgres://tjuajujfzbiqmk:0a29b0b7d1f88949ff10cdedebe0aba644cb7a038b3b6c321f4d040266a538fa@ec2-3-229-252-6.compute-1.amazonaws.com:5432/d3qr86j8928h6u");*/
+$DATABASE_URL = parse_url("postgres://mgwhsbtmdbdwrg:f170eafd40f9c4cb7435954bc3b61269068910c16821ddd13047c02854ef63cf@ec2-52-21-136-176.compute-1.amazonaws.com:5432/dcb000ordddmb8");
 
 return [
 
@@ -67,15 +67,13 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'ec2-3-229-252-6.compute-1.amazonaws.com'),
-            'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'd3qr86j8928h6u'),
-            'username' => env('DB_USERNAME', 'tjuajujfzbiqmk'),
-            'password' => env('DB_PASSWORD', '0a29b0b7d1f88949ff10cdedebe0aba644cb7a038b3b6c321f4d040266a538fa'),
+            'host' => $DATABASE_URL["host"],
+            'port' => $DATABASE_URL["port"],
+            'database' => ltrim($DATABASE_URL["path"], "/" ),
+            'username' => $DATABASE_URL["user"],
+            'password' => $DATABASE_URL["pass"],
             'charset' => 'utf8',
             'prefix' => '',
-            'prefix_indexes' => true,
             'schema' => 'public',
             'sslmode' => 'prefer',
         ],
